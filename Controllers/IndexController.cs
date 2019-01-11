@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using DojoSurvey.Models;
 namespace DojoSurvey
 {
     public class IndexController : Controller
@@ -8,15 +9,17 @@ namespace DojoSurvey
         {
             return View();
         }
-        [HttpPost("result")]
-        public IActionResult Submit(string name, string location, string language, string comment)
+        [HttpPost("survey")]
+        public RedirectToActionResult Method(SurveyForm survey)
         {
-            ViewBag.Name = " ";
-            ViewBag.Name = name;
-            ViewBag.Location = location;
-            ViewBag.Language = language;
-            ViewBag.Comment = comment;
-            return View();
+           
+            return RedirectToAction("Submit", survey);
+        }
+        [HttpGet("result")]
+        public IActionResult Submit(SurveyForm survey)
+        {
+
+            return View("Submit", survey);
         }
     }
 }

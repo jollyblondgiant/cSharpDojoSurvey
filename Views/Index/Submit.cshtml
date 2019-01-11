@@ -13,10 +13,11 @@
 
         
         <h3>Submitted Info:</h3>
-        <p><span class = "field">Name:</span>        <span class = "value">@ViewBag.Name</span></p>
-        <p><span class = "field">Location:</span>    <span class = "value">@ViewBag.Location</span></p>
-        <p><span class = "field">Language:</span>    <span class = "value">@ViewBag.Language</span></p>
-        <p><span class = "field">Comments:</span>    <span class = "value">@ViewBag.Comment</span></p>
+        @model DojoSurvey.Models.SurveyForm
+        <p><span class = "field">Name:</span>        <span class = "value">@Model.Name</span></p>
+        <p><span class = "field">Location:</span>    <span class = "value">@Model.Location</span></p>
+        <p><span class = "field">Language:</span>    <span class = "value">@Model.Language</span></p>
+        <p><span class = "field">Comments:</span>    <span class = "value">@Model.Comment</span></p>
         <a href = "/"><button class = "btn btn-primary">Go Back</button></a>
     </div>
 </body>
