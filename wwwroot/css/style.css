@@ -1,0 +1,26 @@
+h1{
+    color: red;
+}
+form{
+    width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+}
+form :last-child{
+    margin: 10px 10px 10px 350px;
+
+}
+#container{
+    width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;  
+}
+#container p span.field{
+    width: 30%;
+}
+#container p span.value{
+    margin-left: 200px;
+    text-align: center;
+}
