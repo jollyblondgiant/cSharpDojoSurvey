@@ -22,3 +22,4 @@
 /home/andy/Documents/cdojo/c#/DojoSurvey/obj/Debug/netcoreapp2.1/DojoSurvey.pdb
 /home/andy/Documents/cdojo/c#/DojoSurvey/obj/Debug/netcoreapp2.1/DojoSurvey.csproj.CopyComplete
 /home/andy/Documents/cdojo/c#/DojoSurvey/obj/Debug/netcoreapp2.1/Razor/Views/Index/Submit.g.cshtml.cs
+/home/andy/Documents/cdojo/c#/DojoSurvey/obj/Debug/netcoreapp2.1/Razor/Views/_ViewImports.g.cshtml.cs

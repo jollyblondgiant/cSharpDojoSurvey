@@ -24,3 +24,8 @@ form :last-child{
     margin-left: 200px;
     text-align: center;
 }
+.error{
+    padding: 10px;
+    border-radius: 10px;
+    
+}

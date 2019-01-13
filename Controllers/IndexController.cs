@@ -1,5 +1,9 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using DojoSurvey.Models;
+
 namespace DojoSurvey
 {
     public class IndexController : Controller
@@ -9,17 +13,26 @@ namespace DojoSurvey
         {
             return View();
         }
-        [HttpPost("survey")]
-        public RedirectToActionResult Method(SurveyForm survey)
+        [HttpPost("")]
+        public IActionResult Index(SurveyForm newForm)
         {
-           
-            return RedirectToAction("Submit", survey);
+            SurveyForm NewForm = newForm;
+            if(ModelState.IsValid){
+                return RedirectToAction("Success", newForm);
+            }
+            else{
+                return View();
+            }
+            
         }
         [HttpGet("result")]
-        public IActionResult Submit(SurveyForm survey)
+        public IActionResult Success(SurveyForm newForm)
         {
 
-            return View("Submit", survey);
+            return View("Submit", newForm);
         }
+
     }
 }
+
+
